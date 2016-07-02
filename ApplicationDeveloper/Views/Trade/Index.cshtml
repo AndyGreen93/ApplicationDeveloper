@@ -5,63 +5,57 @@
 }
 
 <h2>Index</h2>
-
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TradeDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SettleDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Symbol)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Account)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Quantity)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Principal)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Currency)
-        </th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TradeDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SettleDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Symbol)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Account)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Quantity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Principal)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Currency)
-        </td>
-
-    </tr>
-}
-
+<table style="width: 67%; margin: 0 auto 2em auto;" border="0" cellpadding="3" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Search column</th>
+            <th>Search text</th>
+            <th>Use regular expression</th>
+            <th>Use word search</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr id="filter_col2" data-column="2">
+            <td>Symbol</td>
+            <td align="left"><input class="column_filter" id="col2_filter" type="text"></td>
+            <td align="left"><input class="column_filter" id="col2_regex" type="checkbox"></td>
+            <td align="left"><input class="column_filter" id="col2_smart" checked="checked" type="checkbox"></td>
+        </tr>
+        <tr id="filter_col3" data-column="3">
+            <td>Account</td>
+            <td align="left"><input class="column_filter" id="col3_filter" type="text"></td>
+            <td align="left"><input class="column_filter" id="col3_regex" type="checkbox"></td>
+            <td align="left"><input class="column_filter" id="col3_smart" checked="checked" type="checkbox"></td>
+        </tr>
+    </tbody>
+</table> 
+<table id="trades" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TradeDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SettleDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symbol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Principal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Currency)
+            </th>
+        </tr>
+    </thead>
 </table>
